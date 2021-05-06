@@ -8,6 +8,9 @@ from dias_dynamic_files import (
     genepanels_file,
 )
 
+assay_name = "TSOE"
+assay_version = "v1.0.0"
+
 ref_project_id = "project-Fkb6Gkj433GVVvj73J7x8KbV"
 
 # Single workflow
