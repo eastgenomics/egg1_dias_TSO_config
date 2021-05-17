@@ -59,7 +59,7 @@ multi_stage_input_dict = {
     },
     "{}.query_vcf".format(happy_stage_id): {
         "app": "sentieon-dnaseq", "subdir": "",
-        "pattern": "NA12878_markdup_recalibrated_Haplotyper.vcf.gz$",
+        "pattern": "NA12878.*_markdup_recalibrated_Haplotyper.vcf.gz$",
     },
 }
 
