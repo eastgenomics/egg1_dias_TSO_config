@@ -63,7 +63,7 @@ multi_stage_input_dict = {
     },
 }
 
-ms_workflow_id = "{}:workflow-FyQ2Gy0433Gz76Jp9j5YG80K".format(ref_project_id)
+ms_workflow_id = "{}:workflow-G401B28433GV0QK6Bxz1k9Yv".format(ref_project_id)
 
 # MultiQC
 
