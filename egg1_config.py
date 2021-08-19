@@ -9,13 +9,13 @@ from dias_dynamic_files import (
 )
 
 assay_name = "TSOE"
-assay_version = "v1.0.4"
+assay_version = "v1.0.5"
 
 ref_project_id = "project-Fkb6Gkj433GVVvj73J7x8KbV"
 
 # Single workflow
 
-ss_workflow_id = "{}:workflow-G21Gx3Q433Gp80fK7z5jZ5XY".format(ref_project_id)
+ss_workflow_id = "{}:workflow-G4004gQ433GY4xG60699bXZp".format(ref_project_id)
 
 sentieon_stage_id = "stage-Fy6fpk040vZZPPbq96Jb2KfK"
 
@@ -63,7 +63,7 @@ multi_stage_input_dict = {
     },
 }
 
-ms_workflow_id = "{}:workflow-FyQ2Gy0433Gz76Jp9j5YG80K".format(ref_project_id)
+ms_workflow_id = "{}:workflow-G401B28433GV0QK6Bxz1k9Yv".format(ref_project_id)
 
 # MultiQC
 
@@ -72,13 +72,16 @@ mqc_config_file = "{}:file-Fz947KQ433GbpkvQ104ybPVg".format(ref_project_id)
 
 # Reports
 
+xlsx_flanks = 95
+
 exons_nirvana = "{}:file-Fq18Yp0433GjB7172630p9Yv".format(ref_project_id)
 
+generate_bed_xlsx_stage_id = "stage-G4BJkJQ4JxJvBv5vJq50vJZ8"
 vcf2xls_stage_id = "stage-Fyq5ypj433GzxPK360B8Qfg5"
 generate_bed_stage_id = "stage-Fyq5yy0433GXxz691bKyvjPJ"
 athena_stage_id = "stage-Fyq5z18433GfYZbp3vX1KqjB"
 
-rpt_workflow_id = "{}:workflow-G2qf48Q433GpjyxZ6x9vB4p1".format(ref_project_id)
+rpt_workflow_id = "{}:workflow-G4KKyjQ433GfQvf64p6YYx23".format(ref_project_id)
 
 rpt_stage_input_dict = {
     # vcf2xls
@@ -107,6 +110,10 @@ rpt_stage_input_dict = {
         "app": "mosdepth", "subdir": "",
         "pattern": "-E '{}(.*).per-base.bed.gz.csi$'"
     },
+    "{}.sample_file".format(generate_bed_xlsx_stage_id): {
+        "app": "mosdepth", "subdir": "",
+        "pattern": "-E '{}(.*).per-base.bed.gz.csi$'"
+    },
     # athena
     "{}.mosdepth_files".format(athena_stage_id): {
         "app": "mosdepth", "subdir": "",
@@ -124,12 +131,20 @@ rpt_dynamic_files = {
     "{}.nirvana_genes2transcripts".format(vcf2xls_stage_id): "",
     "{}.exons_nirvana ID".format(generate_bed_stage_id): exons_nirvana,
     "{}.exons_nirvana".format(generate_bed_stage_id): "",
+    "{}.exons_nirvana ID".format(generate_bed_xlsx_stage_id): exons_nirvana,
+    "{}.exons_nirvana".format(generate_bed_xlsx_stage_id): "",
     "{}.nirvana_genes2transcripts ID".format(generate_bed_stage_id): nirvana_genes2transcripts,
     "{}.nirvana_genes2transcripts".format(generate_bed_stage_id): "",
+    "{}.nirvana_genes2transcripts ID".format(generate_bed_xlsx_stage_id): nirvana_genes2transcripts,
+    "{}.nirvana_genes2transcripts".format(generate_bed_xlsx_stage_id): "",
     "{}.gene_panels ID".format(generate_bed_stage_id): genepanels_file,
     "{}.gene_panels".format(generate_bed_stage_id): "",
+    "{}.gene_panels ID".format(generate_bed_xlsx_stage_id): genepanels_file,
+    "{}.gene_panels".format(generate_bed_xlsx_stage_id): "",
     "{}.manifest ID".format(generate_bed_stage_id): bioinformatic_manifest,
     "{}.manifest".format(generate_bed_stage_id): "",
+    "{}.manifest ID".format(generate_bed_xlsx_stage_id): bioinformatic_manifest,
+    "{}.manifest".format(generate_bed_xlsx_stage_id): "",
     "{}.exons_nirvana ID".format(athena_stage_id): exons_nirvana,
     "{}.exons_nirvana".format(athena_stage_id): ""
 }
@@ -175,10 +190,16 @@ rea_dynamic_files = {
     "{}.nirvana_genes2transcripts".format(vcf2xls_stage_id): "",
     "{}.exons_nirvana ID".format(generate_bed_stage_id): exons_nirvana,
     "{}.exons_nirvana".format(generate_bed_stage_id): "",
+    "{}.exons_nirvana ID".format(generate_bed_xlsx_stage_id): exons_nirvana,
+    "{}.exons_nirvana".format(generate_bed_xlsx_stage_id): "",
     "{}.nirvana_genes2transcripts ID".format(generate_bed_stage_id): nirvana_genes2transcripts,
     "{}.nirvana_genes2transcripts".format(generate_bed_stage_id): "",
+    "{}.nirvana_genes2transcripts ID".format(generate_bed_xlsx_stage_id): nirvana_genes2transcripts,
+    "{}.nirvana_genes2transcripts".format(generate_bed_xlsx_stage_id): "",
     "{}.gene_panels ID".format(generate_bed_stage_id): genepanels_file,
     "{}.gene_panels".format(generate_bed_stage_id): "",
+    "{}.gene_panels ID".format(generate_bed_xlsx_stage_id): genepanels_file,
+    "{}.gene_panels".format(generate_bed_xlsx_stage_id): "",
     "{}.exons_nirvana ID".format(athena_stage_id): exons_nirvana,
     "{}.exons_nirvana".format(athena_stage_id): ""
 }
