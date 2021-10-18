@@ -9,7 +9,7 @@ from dias_dynamic_files import (
 )
 
 assay_name = "TSOE"
-assay_version = "v1.0.5"
+assay_version = "v1.0.6"
 
 ref_project_id = "project-Fkb6Gkj433GVVvj73J7x8KbV"
 
@@ -81,7 +81,7 @@ vcf2xls_stage_id = "stage-Fyq5ypj433GzxPK360B8Qfg5"
 generate_bed_stage_id = "stage-Fyq5yy0433GXxz691bKyvjPJ"
 athena_stage_id = "stage-Fyq5z18433GfYZbp3vX1KqjB"
 
-rpt_workflow_id = "{}:workflow-G4KKyjQ433GfQvf64p6YYx23".format(ref_project_id)
+rpt_workflow_id = "project-G5KqjGj4PjqFF5V6J2ffBz2B:workflow-G5Z45fj4Pjq916fg1F4bq1kJ"
 
 rpt_stage_input_dict = {
     # vcf2xls
