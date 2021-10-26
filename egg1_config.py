@@ -53,6 +53,11 @@ happy_stage_bed = {
     "{}.panel_bed".format(happy_stage_id): "file-Fq3J9BQ433Ggk8p1KZX1K617"
 }
 
+female_threshold = 45
+male_threshold = 1
+
+somalier_relate_stage_id = "stage-G5j1jJj433GpFY3v0JZQ2ZZ0"
+
 multi_stage_input_dict = {
     "stage-Fybykxj433GV7vJKFGf3yVkK.SampleSheet": {
         "app": None, "subdir": "", "pattern": "SampleSheet.csv$",
@@ -61,9 +66,13 @@ multi_stage_input_dict = {
         "app": "sentieon-dnaseq", "subdir": "",
         "pattern": "^NA12878.*_markdup_recalibrated_Haplotyper.vcf.gz$",
     },
+    "{}.somalier_extract_file".format(somalier_relate_stage_id): {
+        "app": "somalier_extract", "subdir": "", 
+        "pattern": "-E '(.*).somalier$'"
+    },
 }
 
-ms_workflow_id = "{}:workflow-G401B28433GV0QK6Bxz1k9Yv".format(ref_project_id)
+ms_workflow_id = "{}:workflow-G5j1j28433GYkv4gPpPG8g11".format(ref_project_id)
 
 # MultiQC
 
