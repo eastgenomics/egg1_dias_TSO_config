@@ -15,7 +15,7 @@ ref_project_id = "project-Fkb6Gkj433GVVvj73J7x8KbV"
 
 # Single workflow
 
-ss_workflow_id = "{}:workflow-G4004gQ433GY4xG60699bXZp".format(ref_project_id)
+ss_workflow_id = "{}:workflow-G5gzKx8433GYp8x7FkjV1J2j ".format(ref_project_id)
 
 sentieon_stage_id = "stage-Fy6fpk040vZZPPbq96Jb2KfK"
 
