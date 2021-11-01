@@ -9,7 +9,7 @@ from dias_dynamic_files import (
 )
 
 assay_name = "TSOE"
-assay_version = "v1.0.5"
+assay_version = "v1.0.6"
 
 ref_project_id = "project-Fkb6Gkj433GVVvj73J7x8KbV"
 
