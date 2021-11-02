@@ -67,7 +67,7 @@ multi_stage_input_dict = {
         "pattern": "^NA12878.*_markdup_recalibrated_Haplotyper.vcf.gz$",
     },
     "{}.somalier_extract_file".format(somalier_relate_stage_id): {
-        "app": "somalier_extract", "subdir": "", 
+        "app": "somalier_extract", "subdir": "",
         "pattern": "-E '(.*).somalier$'"
     },
 }
