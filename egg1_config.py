@@ -3,19 +3,19 @@ import sys
 sys.path.append("/mnt/storage/apps/software/dias_config")
 
 from dias_dynamic_files import (
-    nirvana_genes2transcripts,
+    genes2transcripts,
     bioinformatic_manifest,
     genepanels_file,
 )
 
 assay_name = "TSOE"
-assay_version = "v1.0.7"
+assay_version = "v1.0.9"
 
 ref_project_id = "project-Fkb6Gkj433GVVvj73J7x8KbV"
 
 # Single workflow
 
-ss_workflow_id = "{}:workflow-G5gzKx8433GYp8x7FkjV1J2j ".format(ref_project_id)
+ss_workflow_id = "{}:workflow-G5gzKx8433GYp8x7FkjV1J2j".format(ref_project_id)
 
 sentieon_stage_id = "stage-Fy6fpk040vZZPPbq96Jb2KfK"
 
